@@ -6,7 +6,7 @@ public partial class Form1 : Form
     FontStyle b12 = FontStyle.Bold;
     FontStyle ita = FontStyle.Italic;
     FontStyle r = FontStyle.Regular;
-    bool b13 = false;   
+    bool b13 = false;
     bool b14 = false;
     bool itlc = false;
 
@@ -24,7 +24,7 @@ public partial class Form1 : Form
     }
 
     private void label1_Click(object sender, EventArgs e)
-    { 
+    {
 
 
 
@@ -58,7 +58,7 @@ public partial class Form1 : Form
 
     private void simple_Click(object sender, EventArgs e)
     {
-        var f = new Font(fontbox.SelectedItem.ToString(), (int)(sizebox.SelectedItem),r);
+        var f = new Font(fontbox.SelectedItem.ToString(), (int)(sizebox.SelectedItem), r);
         richTextBox1.Font = f;
         b13 = false;
         b14 = true;
@@ -134,5 +134,21 @@ public partial class Form1 : Form
             var f = new Font(fontbox.SelectedItem.ToString(), (int)(sizebox.SelectedItem), ita);
             richTextBox1.Font = f;
         }
+    }
+
+    private void left_Click(object sender, EventArgs e)
+    {
+        richTextBox1.SelectionAlignment = HorizontalAlignment.Left;
+    }
+
+    private void right_Click(object sender, EventArgs e)
+    {
+        richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+
     }
 }
